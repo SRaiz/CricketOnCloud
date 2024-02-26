@@ -5,7 +5,7 @@
     <formula>RunsByPlayer1__c  +  RunsByPlayer2__c  + ExtrasTotal__c</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>Total Runs</label>
-    <precision>4</precision>
+    <precision>18</precision>
     <required>false</required>
     <scale>0</scale>
     <trackHistory>false</trackHistory>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BallType__c</fullName>
+    <externalId>false</externalId>
+    <label>Ball Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Legal</fullName>
+                <default>false</default>
+                <label>Legal</label>
+            </value>
+            <value>
+                <fullName>Wide</fullName>
+                <default>false</default>
+                <label>Wide</label>
+            </value>
+            <value>
+                <fullName>No Ball</fullName>
+                <default>false</default>
+                <label>No Ball</label>
+            </value>
+            <value>
+                <fullName>Wicket</fullName>
+                <default>false</default>
+                <label>Wicket</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

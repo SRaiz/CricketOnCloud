@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Role__c</fullName>
+    <externalId>false</externalId>
+    <label>Role</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>All-Rounder</fullName>
+                <default>false</default>
+                <label>All-Rounder</label>
+            </value>
+            <value>
+                <fullName>Batsman</fullName>
+                <default>false</default>
+                <label>Batsman</label>
+            </value>
+            <value>
+                <fullName>Wicket Keeper</fullName>
+                <default>false</default>
+                <label>Wicket Keeper</label>
+            </value>
+            <value>
+                <fullName>Bowler</fullName>
+                <default>false</default>
+                <label>Bowler</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

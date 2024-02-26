@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Toss_can_only_be_won_by_playing_teams</fullName>
+    <active>true</active>
+    <description>Toss_can_only_be_won_by_playing_teams</description>
+    <errorConditionFormula>AND (
+    TossWonBy__c != AwayTeam__c ,
+    TossWonBy__c != HomeTeam__c ,
+    TossWonBy__c != &apos;&apos;
+)</errorConditionFormula>
+    <errorDisplayField>TossWonBy__c</errorDisplayField>
+    <errorMessage>Toss can only be won by home or away team</errorMessage>
+</ValidationRule>

@@ -25,6 +25,22 @@
         <name>AuraDefinitionBundle</name>
     </types>
     <types>
+		<members>Ball__c</members>
+		<members>Extras__c</members>
+		<members>GamePlayer__c</members>
+		<members>Game__c</members>
+		<members>Inning__c</members>
+		<members>Over__c</members>
+		<members>Partnership__c</members>
+		<members>Player__c</members>
+		<members>Stadium__c</members>
+		<members>Team__c</members>
+		<members>Tournament__c</members>
+		<members>Umpire__c</members>
+		<members>Wicket__c</members>
+		<name>CustomObject</name>
+	</types>
+    <types>
         <members>*</members>
         <name>LightningComponentBundle</name>
     </types>

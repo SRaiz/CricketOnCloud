@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>Game__c</columns>
+    <columns>Inning__c</columns>
+    <columns>Player__c</columns>
+    <columns>PlayerTeam__c</columns>
+    <columns>TotalRunsScored__c</columns>
+    <columns>TotalBallsFaced__c</columns>
+    <columns>TotalFours__c</columns>
+    <columns>TotalSixes__c</columns>
+    <columns>TotalOversBowled__c</columns>
+    <columns>TotalRunsConceded__c</columns>
+    <columns>TotalWicketsTaken__c</columns>
+    <columns>WideRunsConceded__c</columns>
+    <columns>NBRunsConceded__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+</ListView>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ModeOfDismissal__c</fullName>
+    <externalId>false</externalId>
+    <label>Mode Of Dismissal</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Caught</fullName>
+                <default>false</default>
+                <label>Caught</label>
+            </value>
+            <value>
+                <fullName>Bowled</fullName>
+                <default>false</default>
+                <label>Bowled</label>
+            </value>
+            <value>
+                <fullName>Run Out</fullName>
+                <default>false</default>
+                <label>Run Out</label>
+            </value>
+            <value>
+                <fullName>Leg Before Wicket (LBW)</fullName>
+                <default>false</default>
+                <label>Leg Before Wicket (LBW)</label>
+            </value>
+            <value>
+                <fullName>Stumped</fullName>
+                <default>false</default>
+                <label>Stumped</label>
+            </value>
+            <value>
+                <fullName>Hit Wicket</fullName>
+                <default>false</default>
+                <label>Hit Wicket</label>
+            </value>
+            <value>
+                <fullName>Obstructing the Field</fullName>
+                <default>false</default>
+                <label>Obstructing the Field</label>
+            </value>
+            <value>
+                <fullName>Handled the ball</fullName>
+                <default>false</default>
+                <label>Handled the ball</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

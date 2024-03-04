@@ -1,0 +1,118 @@
+<template>
+    <div class={formElementClass}>
+        
+        <!-- Label for the custom lookup field -->
+        <div if:false={isLabelHidden}>
+            <label class="slds-form-element__label" for="combobox-input">
+                <template if:true={isRequired}>
+                    <abbr class="slds-required" title="required">*</abbr>
+                </template>
+                {label}
+            </label>
+
+            <!-- Helptext after Lookup label -->
+            <lightning-helptext if:true={showHelpText} content={helpTextValue}></lightning-helptext> 
+        </div>
+
+        <!-- Container for the custom lookup field -->
+        <div class="slds-form-element__control">
+            <div class={lookupContainerClass}>
+                <div class={lookupModifiedClass}
+                     aria-expanded={isAriaExpanded}
+                     aria-haspopup="listbox"
+                     role="combobox"
+                     onclick={handleLookupClick}>
+                    <div class={lookupFormElementModifiedClass} role="none">
+                        <span if:true={isLookupSelected}>
+                            <span if:true={hasIcon} class={icon.containerClass} title={icon.title}>
+                                <svg class={icon.iconClass} aria-hidden="true">
+                                    <use xlink:href={icon.url}></use>
+                                </svg>
+                                <span class="slds-assistive-text">
+                                    {icon.title}
+                                </span>
+                            </span> 
+                        </span>
+
+                        <!-- Search input part of custom lookup component -->
+                        <input 
+                            id="combobox-input" 
+                            type="text" 
+                            role="textbox" 
+                            readonly={isReadOnly} 
+                            required={isRequired} 
+                            placeholder={placeHolderValue} 
+                            autocomplete="off" 
+                            aria-controls="listbox-id" 
+                            class={searchInputClass} 
+                            value={selectedLookupOption.label} 
+                            onkeyup={handleKeyUp}
+                            onfocus={handleFocus}
+                            onblur={handleBlur}
+                        />
+
+                        <!-- Selected option UI along with remove lookup option button icon -->
+                        <div class="slds-input__icon-group slds-input__icon-group_right">
+                            <span if:false={isLookupSelected} class={searchContainerIconClass} title="Search">
+                                <svg class={searchIconClass} aria-hidden="true">
+                                    <use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#search"></use>
+                                </svg>
+                                <span class="slds-assistive-text">Search</span>
+                            </span>
+                            
+                            <button if:true={isLookupSelected} 
+                                    class={btnIconClass} 
+                                    title="Remove selected option" 
+                                    onclick={handleSelectedOptionRemoval}>
+                                <svg class={closeIconClass} aria-hidden="true">
+                                    <use xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#close"></use>
+                                </svg>
+                                <span class="slds-assistive-text">Remove selected option</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="listbox-id" 
+                         role="listbox" 
+                         class="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid" 
+                         style="margin-top: 0;" 
+                         onmousedown={handleLookupMouseDownEvent} 
+                         onmouseup={handleLookupMouseUpEvent}>
+                        
+                        <ul class="slds-listbox slds-listbox_vertical" role="presentation">
+                            <template for:each={lookupOptionsToDisplay} for:item="option">
+                                <li key={option.index} 
+                                    id={option.index} 
+                                    role="presentation" 
+                                    class={option.ddLIClass} 
+                                    onclick={handleOptionSelection} 
+                                    style="line-height: 1.3rem !important;">
+                                    <div class={option.ddLIMediaClass} role="option">
+                                        <span if:true={hasIcon} class="slds-media__figure slds-listbox__option-icon">
+                                            <span class="slds-icon_container">
+                                                <lightning-icon icon-name={iconName} size="small"></lightning-icon>
+                                            </span>
+                                        </span>
+                                        <span class="slds-media__body">
+                                            <span class="slds-listbox__option-text slds-listbox__option-text_entity">
+                                                {option.label}
+                                            </span>
+                                        </span>
+                                    </div>
+                                </li>
+                            </template>
+
+                            <li if:true={noRecordsFound} class="slds-p-left_small">&#9785; No results found</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Show error in case there is an issue with custom lookup -->
+            <div if:true={showError} role="alert" class="slds-form-element__help slds-is-absolute">
+                {errorMessage}
+            </div>
+        </div>
+    </div>
+</template>

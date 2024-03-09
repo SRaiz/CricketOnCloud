@@ -1,0 +1,24 @@
+<template>
+    <!-- Header of the custom modal component -->
+    <lightning-modal-header label={header}></lightning-modal-header>
+
+    <!-- Body of the custom modal component. I am thinking of creating this body through a screen flow -->
+    <lightning-modal-body>
+        <lightning-flow if:true={flow} 
+                        onstatuschange={handleStatusChange} 
+                        flow-api-name={flow} 
+                        flow-input-variables={flowParams}>
+        </lightning-flow>
+    </lightning-modal-body>
+
+    <!-- Footer of the custom modal component. I am thinking of giving buttons here to handle corresponding functionalities -->
+    <lightning-modal-footer if:true={footer}>
+        <div class="slds-align_absolute-center">
+            <template for:each={buttons} for:item="button">
+                <c-custom-modal-button-wrapper-lwc key={button} label={button} 
+                                                   class="slds-m-right_small">
+                </c-custom-modal-button-wrapper-lwc>
+            </template>
+        </div>
+    </lightning-modal-footer>
+</template>

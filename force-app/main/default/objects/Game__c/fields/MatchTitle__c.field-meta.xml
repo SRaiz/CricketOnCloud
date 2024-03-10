@@ -2,7 +2,24 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>MatchTitle__c</fullName>
     <externalId>false</externalId>
-    <formula>HomeTeam__r.DisplayName__c + &apos; Vs &apos; +  AwayTeam__r.DisplayName__c</formula>
+    <formula>HomeTeam__r.DisplayName__c &amp; &quot; Vs &quot; &amp; AwayTeam__r.DisplayName__c &amp; &quot; (&quot; &amp; 
+CASE (
+    MONTH( DATEVALUE( MatchStartTime__c )),
+    1, &quot;January&quot;,
+    2, &quot;February&quot;,
+    3, &quot;March&quot;, 
+    4, &quot;April&quot;, 
+    5, &quot;May&quot;, 
+    6, &quot;June&quot;,
+    7, &quot;July&quot;,
+    8, &quot;August&quot;,
+    9, &quot;September&quot;,
+    10, &quot;October&quot;,
+    11, &quot;November&quot;,
+    12, &quot;December&quot;,
+    &quot;None&quot;
+) 
+&amp; &quot; &quot; &amp; TEXT ( DAY ( DATEVALUE( MatchStartTime__c ))) &amp; &quot;, &quot; &amp; TEXT ( YEAR ( DATEVALUE( MatchStartTime__c ))) &amp; &quot;)&quot;</formula>
     <label>Match Title</label>
     <required>false</required>
     <trackHistory>false</trackHistory>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Different_Teams_Should_Play_Match</fullName>
+    <active>true</active>
+    <description>A match can only be played between a home team and away team. Both the teams need to be different</description>
+    <errorConditionFormula>AwayTeam__c = HomeTeam__c</errorConditionFormula>
+    <errorMessage>Please choose different teams to create a match</errorMessage>
+</ValidationRule>

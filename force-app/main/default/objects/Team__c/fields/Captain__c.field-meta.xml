@@ -4,6 +4,15 @@
     <deleteConstraint>SetNull</deleteConstraint>
     <externalId>false</externalId>
     <label>Captain</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Player__c.Team__r.Id</field>
+            <operation>equals</operation>
+            <valueField>$Source.Id</valueField>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
     <referenceTo>Player__c</referenceTo>
     <relationshipLabel>Teams</relationshipLabel>
     <relationshipName>Teams</relationshipName>

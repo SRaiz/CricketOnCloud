@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Match</fullName>
+    <fields>MatchTitle__c</fields>
+    <fields>Tournament__c</fields>
+    <fields>MatchType__c</fields>
+    <fields>Stadium__c</fields>
+    <fields>HomeTeam__c</fields>
+    <fields>AwayTeam__c</fields>
+    <fields>Winner__c</fields>
+    <label>Match</label>
+</CompactLayout>

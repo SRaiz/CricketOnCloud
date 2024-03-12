@@ -56,6 +56,23 @@
 		<name>CustomTab</name>
 	</types>
     <types>
+		<members>Game_Record_Page</members>
+		<members>Player_Record_Page</members>
+		<members>Stadium_Record_Page</members>
+		<members>Team_Record_Page</members>
+		<members>Tournament_Record_Page</members>
+		<name>FlexiPage</name>
+	</types>
+    <types>
+		<members>Create_Playing_11_For_Match_Flow</members>
+		<members>Custom_Modal_Flow</members>
+		<name>Flow</name>
+	</types>
+    <types>
+		<members>Game__c-Match Layout</members>
+		<name>Layout</name>
+	</types>
+    <types>
         <members>*</members>
         <name>LightningComponentBundle</name>
     </types>

@@ -66,6 +66,8 @@
     <types>
 		<members>Create_Playing_11_For_Match_Flow</members>
 		<members>Custom_Modal_Flow</members>
+		<members>Show_Success_Toast_Subflow</members>
+		<members>Toss_Decision_Flow</members>
 		<name>Flow</name>
 	</types>
     <types>

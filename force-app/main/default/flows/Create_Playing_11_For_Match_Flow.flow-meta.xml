@@ -408,7 +408,7 @@
         <locationX>182</locationX>
         <locationY>3182</locationY>
         <connector>
-            <targetReference>Success_Screen</targetReference>
+            <targetReference>Playing_11_created_successfully</targetReference>
         </connector>
         <inputReference>Match_Players_To_Insert</inputReference>
     </recordCreates>
@@ -557,8 +557,8 @@
     <screens>
         <name>Navigate_To_Match</name>
         <label>Navigate To Match</label>
-        <locationX>545</locationX>
-        <locationY>3566</locationY>
+        <locationX>754</locationX>
+        <locationY>566</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -880,47 +880,6 @@
         <showFooter>true</showFooter>
         <showHeader>false</showHeader>
     </screens>
-    <screens>
-        <name>Success_Screen</name>
-        <label>Success Screen</label>
-        <locationX>182</locationX>
-        <locationY>3290</locationY>
-        <allowBack>false</allowBack>
-        <allowFinish>true</allowFinish>
-        <allowPause>false</allowPause>
-        <connector>
-            <targetReference>Navigate_To_Match</targetReference>
-        </connector>
-        <fields>
-            <name>Success_Message</name>
-            <extensionName>c:showToastMessageLwc</extensionName>
-            <fieldType>ComponentInstance</fieldType>
-            <inputParameters>
-                <name>message</name>
-                <value>
-                    <stringValue>Playing 11 created successfully</stringValue>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>title</name>
-                <value>
-                    <stringValue>Success</stringValue>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>variant</name>
-                <value>
-                    <stringValue>success</stringValue>
-                </value>
-            </inputParameters>
-            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-            <isRequired>true</isRequired>
-            <storeOutputAutomatically>true</storeOutputAutomatically>
-        </fields>
-        <nextOrFinishButtonLabel>Go to Match</nextOrFinishButtonLabel>
-        <showFooter>true</showFooter>
-        <showHeader>false</showHeader>
-    </screens>
     <start>
         <locationX>419</locationX>
         <locationY>0</locationY>
@@ -929,6 +888,43 @@
         </connector>
     </start>
     <status>Active</status>
+    <subflows>
+        <name>Playing_11_created_successfully</name>
+        <label>Playing 11 created successfully</label>
+        <locationX>182</locationX>
+        <locationY>3290</locationY>
+        <flowName>Show_Success_Toast_Subflow</flowName>
+        <inputAssignments>
+            <name>recordId</name>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>Toast_Message</name>
+            <value>
+                <stringValue>Playing 11 created successfully</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>Toast_Mode</name>
+            <value>
+                <stringValue>dismissible</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>Toast_Title</name>
+            <value>
+                <stringValue>Success</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>Toast_Variant</name>
+            <value>
+                <stringValue>success</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
     <variables>
         <name>All_AwayTeam_Players</name>
         <dataType>SObject</dataType>

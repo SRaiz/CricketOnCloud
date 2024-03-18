@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>*</members>
-        <name>ApexClass</name>
-    </types>
+		<members>CaseTriggerHandler</members>
+		<members>Constants</members>
+		<members>ITriggerInterface</members>
+		<members>TriggerDispatcher</members>
+		<members>TriggerException</members>
+		<name>ApexClass</name>
+	</types>
     <types>
         <members>*</members>
         <name>ApexComponent</name>
@@ -17,9 +21,9 @@
         <name>ApexTestSuite</name>
     </types>
     <types>
-        <members>*</members>
-        <name>ApexTrigger</name>
-    </types>
+		<members>CaseTrigger</members>
+		<name>ApexTrigger</name>
+	</types>
     <types>
         <members>*</members>
         <name>AuraDefinitionBundle</name>

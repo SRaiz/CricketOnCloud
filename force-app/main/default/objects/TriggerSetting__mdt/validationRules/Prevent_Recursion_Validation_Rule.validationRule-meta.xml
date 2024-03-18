@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Recursion_Validation_Rule</fullName>
+    <active>true</active>
+    <description>Enter Prevent Recursion field API names as comma separated List and without spaces</description>
+    <errorConditionFormula>CONTAINS( PreventRecursion__c , &apos; &apos; )</errorConditionFormula>
+    <errorDisplayField>PreventRecursion__c</errorDisplayField>
+    <errorMessage>Please enter Prevent Recursion field API names as comma separated List and without spaces</errorMessage>
+</ValidationRule>

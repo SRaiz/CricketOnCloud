@@ -72,6 +72,7 @@
 	</types>
     <types>
 		<members>Game__c-Match Layout</members>
+		<members>TriggerSetting__mdt-Trigger Setting Layout</members>
 		<name>Layout</name>
 	</types>
     <types>

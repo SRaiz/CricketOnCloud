@@ -24,6 +24,10 @@
         <members>*</members>
         <name>AuraDefinitionBundle</name>
     </types>
+	<types>
+		<members>TriggerSetting.Case</members>
+		<name>CustomMetadata</name>
+	</types>
     <types>
 		<members>Ball__c</members>
 		<members>Extras__c</members>
@@ -35,6 +39,7 @@
 		<members>Player__c</members>
 		<members>Stadium__c</members>
 		<members>Team__c</members>
+		<members>TriggerSetting__mdt</members>
 		<members>Tournament__c</members>
 		<members>Umpire__c</members>
 		<members>Wicket__c</members>

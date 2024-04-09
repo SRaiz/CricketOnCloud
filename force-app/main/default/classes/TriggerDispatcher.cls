@@ -38,7 +38,7 @@ public with sharing class TriggerDispatcher {
     */
     private static void execute ( ITriggerInterface handler, List<TriggerSetting__mdt> triggerSetting ) {
 
-        if ( triggerSetting != null && triggerSetting.size() > 0 ){
+        if ( triggerSetting != null && triggerSetting.size() > 0 ) {
             if ( triggerSetting[0].Disabled__c ) {
                 return;
             } 

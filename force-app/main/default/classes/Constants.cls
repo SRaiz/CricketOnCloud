@@ -6,4 +6,5 @@
 */
 public class Constants {
     public static final String CASE_OBJ = 'Case';
+    public static final String CASE_SUBJECT = 'Case Subject';
 }

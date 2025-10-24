@@ -2,7 +2,7 @@
     @Author 		: Sidharth Pushp
     @BuildDate 		: 18th March, 2024
     @Description 	: This handler class is related to Case trigger and we should make sure that there should be only 1 trigger handler per object.
-    @Updates        : This class is updated to check if its gonna be avaiable for deployment
+    @Updates        : This class is updated to check if its gonna be avaiable for deployment.
 */
 public class CaseTriggerHandler implements ITriggerInterface {
 	
